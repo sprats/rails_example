@@ -2040,3 +2040,719 @@ MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles
 MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00049887s
   Rendered articles/index.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 33ms (Views: 32.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 19:46:08 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 36.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 19:46:36 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 30.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 19:46:38 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iVOqjJSubFVXBZxI2CJFj9HCQu2yBiEmsnjCaaC5C3wS69fZcvWFl52puLG53BIhOPzY5Muwfws5FmsI+1J/OA==", "article"=>{"title"=>"2", "text"=>""}, "commit"=>"Save Article"}
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 19:46:43 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJ384Dv2vPKbMprov9YcPWvqHvo/LMuJBLJ85tWFyQuDJYG13a1VMFGevhHeKEuTgtSE80aalaSP3NWHjm69Tw==", "article"=>{"title"=>"23333", "text"=>""}, "commit"=>"Save Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57cebab3c70fc24a4180e958'), "title"=>"23333", "text"=>""}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000491329s
+Redirected to http://localhost:3000/articles/57cebab3c70fc24a4180e958
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57cebab3c70fc24a4180e958" for 127.0.0.1 at 2016-09-06 19:46:43 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57cebab3c70fc24a4180e958"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cebab3c70fc24a4180e958')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00037818s
+  Rendered articles/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 16.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 19:46:44 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000577446s
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 33.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 19:47:05 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 35.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 19:47:06 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lD2XCNddh9fSPp9LJvcU0QFctwn3jeuUEXnc5m+Za/oPhepdMQZuFRiSu7JHCUN/6GItAI47tbmaF3WHNHIfvg==", "article"=>{"title"=>"", "text"=>""}, "commit"=>"Save Article"}
+  Rendered articles/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 23.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:10:27 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00129188s
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 24.1ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:10:30 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+  Rendered articles/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_70323817150660'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.2ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 20:12:47 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000359582s
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 24.8ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:12:49 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: 
+    4: :patch do |f| %>
+    5:  
+    6:   <% if @article.errors.any? %>
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_70323819296020'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.1ms)
+
+
+Started GET "/articles/57cea04cc70fc24a4180e957/edit" for 127.0.0.1 at 2016-09-06 20:12:51 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57cea04cc70fc24a4180e957"}
+  Rendered articles/edit.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: 
+    4: :patch do |f| %>
+    5:  
+    6:   <% if @article.errors.any? %>
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_70323819296020'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:21:27 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00047057399999999997s
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 21.6ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:21:29 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/sprattus/program/rails_example/app/views/articles/edit.html.erb:3: syntax error, unexpected keyword_do_block
+...url: article_path(@article), do |f| @output_buffer.safe_appe...
+...                               ^
+/home/sprattus/program/rails_example/app/views/articles/edit.html.erb:12: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;         @article.errors.full_messages.each do |msg| 
+                                                       ^
+/home/sprattus/program/rails_example/app/views/articles/edit.html.erb:33: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end 
+             ^):
+  app/views/articles/edit.html.erb:3: syntax error, unexpected keyword_do_block
+  app/views/articles/edit.html.erb:12: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/articles/edit.html.erb:33: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:21:41 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article) do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_70323512906380'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.5ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:28:18 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article) do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_70323820306520'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.9ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:28:48 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_35213660'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9/edit" for 127.0.0.1 at 2016-09-06 20:31:37 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_35213660'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:31:44 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.0005200539999999999s
+  Rendered articles/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 35ms (Views: 34.5ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:31:47 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000398659s
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 32.5ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:31:50 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000801177s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 27.6ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:31:53 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+  Rendered articles/edit.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles", :id=>nil} missing required keys: [:id]):
+    1: <h1>Editing article</h1>
+    2:  
+    3: <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+    4:  
+    5:   <% if @article.errors.any? %>
+    6:     <div id="error_explanation">
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__3394071742670345483_35213660'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.4ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:32:56 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000320792s
+  Rendered articles/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 20.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:32:59 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00053554s
+  Rendered articles/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:33:00 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00042988900000000003s
+  Rendered articles/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb__1447937905731151956_70323818231640'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.0ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:33:03 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000412237s
+  Rendered articles/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 41ms (Views: 39.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:35:48 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00026020300000000003s
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 16.9ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:35:49 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000394171s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.7ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:35:52 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000363412s
+  Rendered articles/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 30.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:38:08 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000351666s
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 20.3ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:38:10 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000391257s
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.4ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:38:12 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000353723s
+  Rendered articles/_form.html.erb (3.8ms)
+  Rendered articles/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 40.3ms)
+
+
+Started PATCH "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:38:15 +0700
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shWp18pkJHotwLceQA4KLKD/7srQPCkEcvcDfAUrmSEprdSCLD/NuOdsk+ch8F2CScF0w6mKdyn5maodXsDtZQ==", "article"=>{"title"=>"Rails is avesome!", "text"=>"It really is!sss"}, "commit"=>"Update Article", "id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000439991s
+MONGODB | localhost:27017 | blog_development.update | STARTED | {"update"=>"articles", "ordered"=>true, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}, "u"=>{"$set"=>{"text"=>"It really is!sss"}}, "multi"=>false, "upsert"=>false}]}
+MONGODB | localhost:27017 | blog_development.update | SUCCEEDED | 0.000433616s
+Redirected to http://localhost:3000/articles/57ce94f4c70fc2485190b3a8
+Completed 302 Found in 5ms
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:38:15 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00030862699999999996s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:38:16 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00052645s
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:47:53 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000432864s
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 33ms (Views: 27.0ms)
+
+
+Started DELETE "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 20:48:00 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2sljPT5NwItPHqElITFWFxzZslHABG+qVtb9FXlzPkdBcR5o2BYpSYWyhdxAzwG59ecoWLmyMYfduFR0IphKAw==", "id"=>"57ce9515c70fc2485190b3a9"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000388878s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"articles", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.00049823s
+Completed 500 Internal Server Error in 34ms
+
+NameError (undefined local variable or method `articles_params' for #<ArticlesController:0x00000004162430>
+Did you mean?  article_params
+               articles_path):
+  app/controllers/articles_controller.rb:42:in `destroy'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.0ms)
+
+
+Started DELETE "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 20:48:39 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2sljPT5NwItPHqElITFWFxzZslHABG+qVtb9FXlzPkdBcR5o2BYpSYWyhdxAzwG59ecoWLmyMYfduFR0IphKAw==", "id"=>"57ce9515c70fc2485190b3a9"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000339735s
+Completed 404 Not Found in 7ms
+
+Mongoid::Errors::DocumentNotFound (
+message:
+  Document(s) not found for class Article with id(s) 57ce9515c70fc2485190b3a9.
+summary:
+  When calling Article.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 57ce9515c70fc2485190b3a9 ... (1 total) and the following ids were not found: 57ce9515c70fc2485190b3a9.
+resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/articles_controller.rb:39:in `destroy'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 20:49:27 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 19.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 20:49:30 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNkEJim7lVFcoIN6bAOlulv55xNeUu/kmaHCO2QCtWsjYXlzz+B8k5YMp4MN/fIUssd9GifksckSz2taP+nBLw==", "article"=>{"title"=>"ssssss", "text"=>"sss"}, "commit"=>"Create Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57cec96ac70fc24a4180e959'), "title"=>"ssssss", "text"=>"sss"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.00043362299999999995s
+Redirected to http://localhost:3000/articles/57cec96ac70fc24a4180e959
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57cec96ac70fc24a4180e959" for 127.0.0.1 at 2016-09-06 20:49:30 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57cec96ac70fc24a4180e959"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cec96ac70fc24a4180e959')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00035258900000000005s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 19.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:49:31 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000412018s
+  Rendered articles/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 31.3ms)
+
+
+Started DELETE "/articles/57cebab3c70fc24a4180e958" for 127.0.0.1 at 2016-09-06 20:49:35 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mEpT01CBM0CcikEKLw5/sbRYBNChTgLIpGmYROZ7qwID8i6GttraglYmZfNO8CgfXWae2dj4XOUvBzElvZDfRg==", "id"=>"57cebab3c70fc24a4180e958"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cebab3c70fc24a4180e958')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000398386s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"articles", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57cebab3c70fc24a4180e958')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.000446944s
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 4ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:49:35 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000398919s
+  Rendered articles/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 32ms (Views: 31.6ms)
+
+
+Started DELETE "/articles/57ce9889c70fc24a4180e955" for 127.0.0.1 at 2016-09-06 20:49:37 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XH+2mbb0AaTeFcWPffLRY+ZKiGN+PUR5RhqSPbH1/2PHx8vMUK/oZhS54XYcDIbND3QSageLGlTNdDtc6h6LJw==", "id"=>"57ce9889c70fc24a4180e955"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00037914800000000005s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"articles", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.000435507s
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 3ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:49:37 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000416066s
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 20.0ms)
+
+
+Started DELETE "/articles/57ce9550c70fc2485190b3aa" for 127.0.0.1 at 2016-09-06 20:49:39 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oIC9RQMmuIHtbnl4+UJbwEk2xPk9QnJeGbic9yAMeoA7OMAQ5X1RQyfCXYGYvAxuoAhe8ET0LHOS1jWWe+cOxA==", "id"=>"57ce9550c70fc2485190b3aa"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000348696s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"articles", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.0005417219999999999s
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 4ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:49:39 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00036614499999999996s
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 20.2ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8/edit" for 127.0.0.1 at 2016-09-06 20:49:42 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000464758s
+  Rendered articles/_form.html.erb (3.1ms)
+  Rendered articles/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 31ms (Views: 28.6ms)
+
+
+Started PATCH "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:49:43 +0700
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gGL4Ncew2AKTZFXMdKh548q2JPc6qQvJU+ioaiVYFK4b2oVgIesxwFnIcTUVVi5NI4i+/kMfVeTYhgELfrNg6g==", "article"=>{"title"=>"Rails is avesome!", "text"=>"It really is!sss"}, "commit"=>"Update Article", "id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00035208799999999997s
+Redirected to http://localhost:3000/articles/57ce94f4c70fc2485190b3a8
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 20:49:43 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00034463s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 20:49:45 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00045420499999999995s
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 27.9ms)
