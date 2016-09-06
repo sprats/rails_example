@@ -3253,3 +3253,250 @@ MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles
 MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000536236s
   Rendered articles/index.html.erb within layouts/application (6.4ms)
 Completed 200 OK in 41ms (Views: 40.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-06 21:37:46 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 21:37:48 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000446905s
+  Rendered articles/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 46ms (Views: 35.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 21:37:54 +0700
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x007feb16ee79e8@/home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 21:37:59 +0700
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x007feb16ee79e8@/home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 21:38:42 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00035348s
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 22.2ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 21:38:47 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000352415s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000849182s
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (5.5ms)
+  Rendered articles/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 49ms (Views: 47.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 21:38:50 +0700
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x007feb15bf6b68@/home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 21:38:54 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (9.4ms)
+  Rendered articles/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 39ms (Views: 37.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 21:38:57 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8S1dOklKhLfq+R6Kd3fLnX32rhs+qbFl3mSh4cm3rBxqlSBvrxFtdSBVOnMWiZwzlMg0Ekcf70hVCgiAklzYWA==", "article"=>{"title"=>"dasdsa", "text"=>"sadasdasd"}, "commit"=>"Create Article"}
+Filter chain halted as #<Proc:0x007feb15bf6b68@/home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 21:38:57 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8S1dOklKhLfq+R6Kd3fLnX32rhs+qbFl3mSh4cm3rBxqlSBvrxFtdSBVOnMWiZwzlMg0Ekcf70hVCgiAklzYWA==", "article"=>{"title"=>"dasdsa", "text"=>"sadasdasd"}, "commit"=>"Create Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971'), "title"=>"dasdsa", "text"=>"sadasdasd"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.00039519s
+Redirected to http://localhost:3000/articles/57ced501c70fc24a4180e971
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:38:57 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00029480500000000003s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000365049s
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (2.1ms)
+  Rendered articles/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 31ms (Views: 27.6ms)
+
+
+Started GET "/articles/57ced501c70fc24a4180e971/edit" for 127.0.0.1 at 2016-09-06 21:38:59 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00044775399999999997s
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 45ms (Views: 42.0ms)
+
+
+Started PATCH "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:39:02 +0700
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/XMnNMc2tStEJNFPIU71oF6ESdKCU+bE8PTDm9CUQBpmy1phIW1c6Y6I9bZAsKIOt7rT2/vluOl7mmr6i380Xg==", "article"=>{"title"=>"dasdsa", "text"=>"sadasdasssd"}, "commit"=>"Update Article", "id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000325746s
+MONGODB | localhost:27017 | blog_development.update | STARTED | {"update"=>"articles", "ordered"=>true, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}, "u"=>{"$set"=>{"text"=>"sadasdasssd"}}, "multi"=>false, "upsert"=>false}]}
+MONGODB | localhost:27017 | blog_development.update | SUCCEEDED | 0.000400534s
+Redirected to http://localhost:3000/articles/57ced501c70fc24a4180e971
+Completed 302 Found in 7ms
+
+
+Started GET "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:39:02 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000336858s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000387816s
+  Rendered collection (0.1ms)
+  Rendered comments/_form.html.erb (4.2ms)
+  Rendered articles/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 29.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 21:39:05 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.0005605370000000001s
+  Rendered articles/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 48ms (Views: 47.1ms)
+
+
+Started DELETE "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 21:39:08 +0700
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jg80Qh0rvCKRosEROQ6ehHMoj3kHvDjiJHobO96rLPa9t0kX+3BV4FsO5ehY8MkqmhYVcH4KZs+vFLJahUBYsg==", "id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000285015s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000339992s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"articles", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.000369838s
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 5ms
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 21:39:08 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000322659s
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms)
+
+
+Started GET "/articles/57cec96ac70fc24a4180e959/edit" for 127.0.0.1 at 2016-09-06 21:39:10 +0700
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"57cec96ac70fc24a4180e959"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cec96ac70fc24a4180e959')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000407378s
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 34.0ms)
+
+
+Started GET "/articles/57cec96ac70fc24a4180e959" for 127.0.0.1 at 2016-09-06 21:39:12 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57cec96ac70fc24a4180e959"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cec96ac70fc24a4180e959')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00039145499999999997s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57cec96ac70fc24a4180e959')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000643555s
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (5.8ms)
+  Rendered articles/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 43ms (Views: 40.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 21:39:14 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.9ms)
+  Rendered articles/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 36.2ms)
+
+
+Started GET "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:39:19 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000432641s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00046307s
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered articles/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 39.0ms)
+
+
+Started POST "/articles/57ced501c70fc24a4180e971/comments" for 127.0.0.1 at 2016-09-06 21:39:23 +0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0DH1LWfctSGITNBfIASpE+B3TTRcs99vmZirGEb+ZXxLiYh4gYdc40Lg9KZB+v69CUnXPSUFgUIS9gJ5HRUROA==", "comment"=>{"commenter"=>"sdasdasd", "body"=>"sadasda"}, "commit"=>"Create Comment", "article_id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000332183s
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"comments", "documents"=>[{"_id"=>BSON::ObjectId('57ced51bc70fc24a4180e976'), "commenter"=>"sdasdasd", "body"=>"sadasda", "article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000393971s
+Redirected to http://localhost:3000/articles/57ced501c70fc24a4180e971
+Completed 302 Found in 5ms
+
+
+Started GET "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:39:23 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000341382s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000378046s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}, "limit"=>-1}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000266332s
+  Rendered comments/_comment.html.erb (1.9ms)
+  Rendered comments/_form.html.erb (2.1ms)
+  Rendered articles/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 29ms (Views: 27.1ms)
+
+
+Started DELETE "/articles/57ced501c70fc24a4180e971/comments/57ced51bc70fc24a4180e976" for 127.0.0.1 at 2016-09-06 21:39:27 +0700
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x2MXbt7rvgCZ+Ola3lF3vIPQDGiDr3mPJ+/bvgh/ISNc22o7OLBXwlNUzaO/ryASau6WYfoZJ6KsgXLfU5RVZw==", "article_id"=>"57ced501c70fc24a4180e971", "id"=>"57ced51bc70fc24a4180e976"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000377699s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971'), "_id"=>BSON::ObjectId('57ced51bc70fc24a4180e976')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00047037s
+MONGODB | localhost:27017 | blog_development.delete | STARTED | {"delete"=>"comments", "deletes"=>[{"q"=>{"_id"=>BSON::ObjectId('57ced51bc70fc24a4180e976')}, "limit"=>1}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.delete | SUCCEEDED | 0.000434884s
+Redirected to http://localhost:3000/articles/57ced501c70fc24a4180e971
+Completed 302 Found in 6ms
+
+
+Started GET "/articles/57ced501c70fc24a4180e971" for 127.0.0.1 at 2016-09-06 21:39:27 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ced501c70fc24a4180e971"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000283855s
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"comments", "filter"=>{"article_id"=>BSON::ObjectId('57ced501c70fc24a4180e971')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000314886s
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (2.1ms)
+  Rendered articles/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 22.6ms)
