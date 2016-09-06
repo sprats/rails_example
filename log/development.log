@@ -918,3 +918,1125 @@ Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b9
 
 
 Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-09-06 13:06:05 +0700
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 13:10:46 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 46ms (Views: 45.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 13:20:20 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 13:20:31 +0700
+
+AbstractController::ActionNotFound (The action 'create' could not be found for ArticlesController):
+  actionpack (4.2.6) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/sprattus/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/sprattus/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/sprattus/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 14:20:18 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"feMUPdyyr4X4kKX0TdR9rzqdf2LwxAe6r4kkxrzx9a/mW2loOulGRzI8gQ0sKioB06Pla4lyWZck542n5xqB6w==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:43:49 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"feMUPdyyr4X4kKX0TdR9rzqdf2LwxAe6r4kkxrzx9a/mW2loOulGRzI8gQ0sKioB06Pla4lyWZck542n5xqB6w==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+Completed 500 Internal Server Error in 12ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/articles_controller.rb:6:in `new'
+  app/controllers/articles_controller.rb:6:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:51:08 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"feMUPdyyr4X4kKX0TdR9rzqdf2LwxAe6r4kkxrzx9a/mW2loOulGRzI8gQ0sKioB06Pla4lyWZck542n5xqB6w==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30017ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x69883196699620 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.6ms)
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 16:51:40 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 56.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:51:43 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s5xvYabQ6Qg8qQTlBvI7sPOjRSaWcaIBrGk85R20ZHsoJBI0QIsAyvYFIBxnDGweGp3fL+/H/CwnB5WERl8QPw==", "article"=>{"title"=>"someth", "text"=>""}, "commit"=>"Save Article"}
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30010ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x69883196699620 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:52:13 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s5xvYabQ6Qg8qQTlBvI7sPOjRSaWcaIBrGk85R20ZHsoJBI0QIsAyvYFIBxnDGweGp3fL+/H/CwnB5WERl8QPw==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30336ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x69883196699620 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:55:35 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s5xvYabQ6Qg8qQTlBvI7sPOjRSaWcaIBrGk85R20ZHsoJBI0QIsAyvYFIBxnDGweGp3fL+/H/CwnB5WERl8QPw==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30009ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x69883196699620 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 16:56:05 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 17.9ms)
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 16:57:21 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xP/yJ74STKrwEi0CWY+lLCYZ6YjZyptY/Y3kQ/gTPmpfR49yWEmlaDq+Cfs4cfKCzydzgaB8xXV2400io/hKLg==", "article"=>{"title"=>"Rails is avesome!", "text"=>"It really is!"}, "commit"=>"Save Article"}
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30010ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x69883196699620 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.2ms)
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:00:51 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xP/yJ74STKrwEi0CWY+lLCYZ6YjZyptY/Y3kQ/gTPmpfR49yWEmlaDq+Cfs4cfKCzydzgaB8xXV2400io/hKLg==", "article"=>{"title"=>"Rails is avesome!", "text"=>"It really is!"}, "commit"=>"Save Article"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+Completed 500 Internal Server Error in 30032ms
+
+Mongo::Error::NoServerAvailable (No server is available matching preference: #<Mongo::ServerSelector::Primary:0x19335660 tag_sets=[]> using server_selection_timeout=30 and local_threshold=0.015):
+  app/controllers/articles_controller.rb:8:in `create'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.5ms)
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:05:40 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xP/yJ74STKrwEi0CWY+lLCYZ6YjZyptY/Y3kQ/gTPmpfR49yWEmlaDq+Cfs4cfKCzydzgaB8xXV2400io/hKLg==", "article"=>{"title"=>"Rails is avesome!", "text"=>"It really is!"}, "commit"=>"Save Article"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8'), "title"=>"Rails is avesome!", "text"=>"It really is!"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.09913689099999999s
+Redirected to http://localhost:3000/articles/57ce94f4c70fc2485190b3a8
+Completed 302 Found in 125ms
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 17:05:40 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+  Rendered articles/show.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb___1093546489514261704_5636480'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:06:13 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xP/yJ74STKrwEi0CWY+lLCYZ6YjZyptY/Y3kQ/gTPmpfR49yWEmlaDq+Cfs4cfKCzydzgaB8xXV2400io/hKLg==", "article"=>{"title"=>"something", "text"=>"here"}, "commit"=>"Save Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9'), "title"=>"something", "text"=>"here"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.001207785s
+Redirected to http://localhost:3000/articles/57ce9515c70fc2485190b3a9
+Completed 302 Found in 4ms
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 17:06:13 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb___1093546489514261704_5636480'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 17:07:03 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 530ms (Views: 529.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 17:07:08 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:07:12 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sj/eekyi8Gs7taATcZhhV0sjWye3+PtRqyfQ1WZWN+jRh6MvqvkZqfEZhOoQZjb5oh3BLs5OpXwgSXm0Pb1DrA==", "article"=>{"title"=>"ss", "text"=>"sss"}, "commit"=>"Save Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa'), "title"=>"ss", "text"=>"sss"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000528906s
+Redirected to http://localhost:3000/articles/57ce9550c70fc2485190b3aa
+Completed 302 Found in 4ms
+
+
+Started GET "/articles/57ce9550c70fc2485190b3aa" for 127.0.0.1 at 2016-09-06 17:07:12 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9550c70fc2485190b3aa"}
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p>
+    2:   <strong>Title:</strong>
+    3:   <%= @article.title %>
+    4: </p>
+    5:  
+    6: <p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb___1093546489514261704_5636480'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:19:47 +0700
+
+SyntaxError (/home/sprattus/program/rails_example/app/controllers/articles_controller.rb:21: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/articles_controller.rb:21: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.6ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:20:56 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sj/eekyi8Gs7taATcZhhV0sjWye3+PtRqyfQ1WZWN+jRh6MvqvkZqfEZhOoQZjb5oh3BLs5OpXwgSXm0Pb1DrA==", "article"=>{"title"=>"ss", "text"=>"sss"}, "commit"=>"Save Article"}
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955'), "title"=>"ss", "text"=>"sss"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000646728s
+Redirected to http://localhost:3000/articles/57ce9889c70fc24a4180e955
+Completed 302 Found in 18ms
+
+
+Started GET "/articles/57ce9889c70fc24a4180e955" for 127.0.0.1 at 2016-09-06 17:20:57 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9889c70fc24a4180e955"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00036563499999999995s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 219ms (Views: 216.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 17:24:31 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000356924s
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 39.5ms)
+
+
+Started GET "/articles/57ce9889c70fc24a4180e955" for 127.0.0.1 at 2016-09-06 17:24:34 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9889c70fc24a4180e955"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.001209968s
+  Rendered articles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 47.0ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 17:24:36 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000400945s
+  Rendered articles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 41.9ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 17:24:38 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000395682s
+  Rendered articles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 29.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:40:48 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sj/eekyi8Gs7taATcZhhV0sjWye3+PtRqyfQ1WZWN+jRh6MvqvkZqfEZhOoQZjb5oh3BLs5OpXwgSXm0Pb1DrA==", "article"=>{"title"=>"new article", "text"=>"there is some info"}, "commit"=>"Save Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57ce9d30c70fc24a4180e956'), "title"=>"new article", "text"=>"there is some info"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000433728s
+Redirected to http://localhost:3000/articles/57ce9d30c70fc24a4180e956
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57ce9d30c70fc24a4180e956" for 127.0.0.1 at 2016-09-06 17:40:48 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9d30c70fc24a4180e956"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9d30c70fc24a4180e956')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00026537s
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.9ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2016-09-06 17:40:54 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00037778599999999996s
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms)
+
+
+Started GET "/articles/57ce94f4c70fc2485190b3a8" for 127.0.0.1 at 2016-09-06 17:40:55 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce94f4c70fc2485190b3a8"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce94f4c70fc2485190b3a8')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000389101s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 29.6ms)
+
+
+Started GET "/articles/57ce9515c70fc2485190b3a9" for 127.0.0.1 at 2016-09-06 17:40:58 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9515c70fc2485190b3a9"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9515c70fc2485190b3a9')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000333753s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.1ms)
+
+
+Started GET "/articles/57ce9550c70fc2485190b3aa" for 127.0.0.1 at 2016-09-06 17:41:00 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9550c70fc2485190b3aa"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000283385s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.9ms)
+
+
+Started GET "/articles/57ce9889c70fc24a4180e955" for 127.0.0.1 at 2016-09-06 17:41:01 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9889c70fc24a4180e955"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9889c70fc24a4180e955')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000328176s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 41.4ms)
+
+
+Started GET "/articles/57ce9d30c70fc24a4180e956" for 127.0.0.1 at 2016-09-06 17:41:03 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9d30c70fc24a4180e956"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9d30c70fc24a4180e956')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000427742s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 29.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 17:41:06 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 41.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-06 17:41:10 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-06 17:41:13 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 17:41:15 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000488362s
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 34.1ms)
+
+
+Started GET "/articles/57ce9d30c70fc24a4180e956" for 127.0.0.1 at 2016-09-06 17:41:17 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9d30c70fc24a4180e956"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9d30c70fc24a4180e956')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000382575s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 33.5ms)
+
+
+Started GET "/articles/57ce9550c70fc2485190b3aa" for 127.0.0.1 at 2016-09-06 17:41:23 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9550c70fc2485190b3aa"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000360732s
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-06 17:52:52 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 17:52:53 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.0005880029999999999s
+  Rendered articles/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (undefined method `title' for #<Article _id: 57ce94f4c70fc2485190b3a8, >):
+     9:  
+    10:   <% @articles.each do |article| %>
+    11:     <tr>
+    12:       <td><%= article.title %></td>
+    13:       <td><%= article.text %></td>
+    14:       <td><%= link_to 'Show', article_path(article) %></td>
+    15:     </tr>
+  app/views/articles/index.html.erb:12:in `block in _app_views_articles_index_html_erb___3651853839337157614_70323818306140'
+  app/views/articles/index.html.erb:10:in `_app_views_articles_index_html_erb___3651853839337157614_70323818306140'
+
+
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sprattus/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 17:53:49 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000457241s
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 19.4ms)
+
+
+Started GET "/articles/57ce9550c70fc2485190b3aa" for 127.0.0.1 at 2016-09-06 17:53:52 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57ce9550c70fc2485190b3aa"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57ce9550c70fc2485190b3aa')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000460442s
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 24.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2016-09-06 17:53:54 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 34ms (Views: 33.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:53:58 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3omoZ8V44425pXls0fHzy79m/9bICuDz0M7POYAcwQNFMdUyIyMKT3MJXZWwD6RlVlhl37G8vt5boGZY2/e1Rw==", "article"=>{"title"=>"34", "text"=>"sdffghh"}, "commit"=>"Save Article"}
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2016-09-06 17:54:04 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCKEMWAD0s3xpQN55qDfe/gpiCy5A+fYXp8DbiDGxaAnmvlkhlg7DzsJJ4CHXojVERcSJcC1ufXV8aoPey2x5A==", "article"=>{"title"=>"34456", "text"=>"sdffghh"}, "commit"=>"Save Article"}
+MONGODB | localhost:27017 | blog_development.insert | STARTED | {"insert"=>"articles", "documents"=>[{"_id"=>BSON::ObjectId('57cea04cc70fc24a4180e957'), "title"=>"34456", "text"=>"sdffghh"}], "ordered"=>true}
+MONGODB | localhost:27017 | blog_development.insert | SUCCEEDED | 0.000500839s
+Redirected to http://localhost:3000/articles/57cea04cc70fc24a4180e957
+Completed 302 Found in 3ms
+
+
+Started GET "/articles/57cea04cc70fc24a4180e957" for 127.0.0.1 at 2016-09-06 17:54:04 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"57cea04cc70fc24a4180e957"}
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{"_id"=>BSON::ObjectId('57cea04cc70fc24a4180e957')}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.000319623s
+  Rendered articles/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 16.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-09-06 17:54:06 +0700
+Processing by ArticlesController#index as HTML
+MONGODB | localhost:27017 | blog_development.find | STARTED | {"find"=>"articles", "filter"=>{}}
+MONGODB | localhost:27017 | blog_development.find | SUCCEEDED | 0.00049887s
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 32.5ms)
