@@ -10,14 +10,6 @@
 /test/version_tmp/
 /tmp/
 
-# Ignore bundler config.
-/.bundle
-
-# Ignore all logfiles and tempfiles.
-/log/*
-!/log/.keep
-/.idea/*
-
 # Used by dotenv library to load environment variables.
 # .env
 
