@@ -19,10 +19,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-    new_params = article_params
-    #new_params[:tags_list] = params[:article][:tags_list].split(',')
-
-    @article = Article.new(new_params)
+    @article = Article.new(article_params)
 
 		if @article.save
 			redirect_to @article
@@ -34,10 +31,7 @@ class ArticlesController < ApplicationController
 	def update
 		@article = Article.find(params[:id])
 
-    new_params = article_params
-		#new_params[:tags_list] = params[:article][:tags_list].split(',')
-
-    if @article.update(new_params)
+    if @article.update(article_params)
       redirect_to @article
 		else
 			render 'edit'
@@ -51,19 +45,17 @@ class ArticlesController < ApplicationController
     	redirect_to articles_path
 	end
 
-	#def tag
-	#	@articles = Article.articles_for params[:tag]
-	#
-	#	respond_to do |format|
-	#		format.html { render "index" }
-	#		format.xml { render :xml => @articles }
-	#	end
-	#end
+	def tag
+		@articles = Article.articles_for params[:tag]
+
+		respond_to do |format|
+			format.html { render "index" }
+			format.xml { render :xml => @articles }
+		end
+	end
 
 	private
 		def article_params
       params.require(:article).permit(:title, :text, :tags_list )
-      #params.require(:article).permit({:tags => []})
-        #params.require(:article).permit(:title, :text, :tags )
 		end
 end

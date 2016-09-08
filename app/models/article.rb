@@ -1,6 +1,5 @@
 class Article
   include Mongoid::Document
-  include Mongoid::Timestamps
 
   field :title, :type => String
   field :text, :type => String
@@ -18,7 +17,7 @@ class Article
     self.tags.join(', ')
   end
 
-  def self.articles_for_tag
+  def self.articles_for tag
     Article.any_in(:tags => [tag])
   end
 
