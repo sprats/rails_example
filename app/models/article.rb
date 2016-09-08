@@ -15,7 +15,7 @@ class Article
   end
 
   def tags_list
-    self.tags.join(',')
+    self.tags.join(', ')
   end
 
   def self.articles_for_tag

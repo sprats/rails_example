@@ -1,5 +1,12 @@
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
 <h1>Listing Articles</h1>
 <%= link_to 'New article', new_article_path %>
+
+<h3><button id="opener">open the dialog</button></h3>
+<div id="info_dialog" title="Info" hidden="hidden">You can add, edit and destroy new articles at this page.</div>
 
 <div id="articles">
   <% @articles.each do |article| %>
