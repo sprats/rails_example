@@ -19,9 +19,8 @@ class Article
 
   def tag_tokens=(tags_string)
     tag_names = tags_string.split(",").collect{|s| s.strip.downcase}.uniq
-    new_or_found_tags = tag_names.collect { |name| Tag.find_or_create_by(name: name) }
-    self.tags = new_or_found_tags
+    found_tags = tag_names.collect { |name| Tag.where(name: name) }
+    new_tags = tag_names.collect { |name| Tag.where(name: name).first_or_create }
+    self.tags = found_tags.concat new_tags
   end
-
-
 end
