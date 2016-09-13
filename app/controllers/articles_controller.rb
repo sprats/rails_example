@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-	
-	http_basic_authenticate_with name: "admin", password: "pass", except: [:index, :show]
+
+  http_basic_authenticate_with name: "admin", password: "pass", except: [:index, :show]
 
 	def index
 		@articles = Article.all
@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 	def create
     @article = Article.new(article_params)
 
-		if @article.save
+		if @article.save(article_params)
 			redirect_to @article
 		else
 			render 'new'
@@ -45,17 +45,9 @@ class ArticlesController < ApplicationController
     	redirect_to articles_path
 	end
 
-	def tag
-		@articles = Article.articles_for params[:tag]
-
-		respond_to do |format|
-			format.html { render "index" }
-			format.xml { render :xml => @articles }
-		end
-	end
 
 	private
 		def article_params
-      params.require(:article).permit(:title, :text, :tags_list )
+      params.require(:article).permit(:title, :text, :tag_tokens )
 		end
 end
